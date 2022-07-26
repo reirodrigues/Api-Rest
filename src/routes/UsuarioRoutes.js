@@ -4,11 +4,13 @@ import loginRequired from "../middlewares/loginRequired";
 
 const router = new Router();
 
+// Fins Educacionais
+// router.get("/", usuariocontrollers.index); // Lista usuário
+// router.get("/:id", usuariocontrollers.show); // Lista usuário
+
 router.post("/", usuariocontrollers.store);
-router.get("/", loginRequired, usuariocontrollers.index);
-router.get("/:id", usuariocontrollers.show);
-router.put("/:id", usuariocontrollers.update);
-router.delete("/:id", usuariocontrollers.delete);
+router.put("/", loginRequired, usuariocontrollers.update);
+router.delete("/", loginRequired, usuariocontrollers.delete);
 
 export default router;
 
