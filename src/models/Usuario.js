@@ -36,8 +36,8 @@ export default class Usuario extends Model {
           defaultValue: "",
           validate: {
             len: {
-              args: [6, 50],
-              msg: "Campo senha deve ter entre 6 e 50 caracteres",
+              args: [5, 50],
+              msg: "Campo senha deve ter entre 5 e 50 caracteres",
             },
           },
         },
